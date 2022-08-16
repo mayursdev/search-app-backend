@@ -5,7 +5,7 @@ require("dotenv").config();
 const adsRoute = require("./routes/ads");
 const companiesRoute = require("./routes/companies");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 mongoose
