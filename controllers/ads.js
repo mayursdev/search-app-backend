@@ -10,11 +10,11 @@ const getAds = async (req, res) => {
         { primaryText: { $regex: search, $options: "i" } },
         { headline: { $regex: search, $options: "i" } },
       ],
-    }).populate();
+    }).populate("companyId");
     return res.json(matchedAds);
   }
 
-  const ads = await Ad.find();
+  const ads = await Ad.find().populate("companyId");
   res.json(ads);
 };
 
