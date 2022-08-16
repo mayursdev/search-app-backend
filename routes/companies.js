@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const companiesController = require("../controllers/companies");
 
-router.get("/", (req, res) => {
-  res.json([{ name: "Nike" }, { name: "Netflix" }]);
-});
+router.get("/", companiesController.getCompanies);
 
-
-module.exports = router
+module.exports = router;

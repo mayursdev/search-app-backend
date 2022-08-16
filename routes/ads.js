@@ -1,14 +1,7 @@
 const express = require("express");
+const adsController = require("../controllers/ads");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  const { search } = req.query;
-
-  if (search) {
-    res.json({ search });
-  } else {
-    res.json([{ name: "ad1" }, { name: "ad2" }]);
-  }
-});
+router.get("/", adsController.getAds);
 
 module.exports = router;
