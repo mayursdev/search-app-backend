@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const AdSchema = mongoose.Schema({
+const AdSchema = new mongoose.Schema({
   companyId: { type: mongoose.SchemaTypes.ObjectId, ref: "Company" },
   primaryText: {
     type: String,

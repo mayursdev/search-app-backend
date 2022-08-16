@@ -1,5 +1,8 @@
-const getCompanies = (req, res) => {
-  res.json([{ name: "Nike" }, { name: "Netflix" }]);
+const Company = require("../model/Company");
+
+const getCompanies = async (req, res) => {
+  const companies = await Company.find();
+  res.json(companies);
 };
 
 module.exports = {

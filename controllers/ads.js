@@ -1,12 +1,21 @@
-const getAds = (req, res) => {
+const Ad = require("../model/Ad");
+
+const getAds = async (req, res) => {
   const { search } = req.query;
 
   if (search) {
     // only return ads that match search term
-    return res.json({ search });
+    const matchedAds = await Ad.find({
+      $or: [
+        { primaryText: { $regex: search, $options: "i" } },
+        { headline: { $regex: search, $options: "i" } },
+      ],
+    }).populate();
+    return res.json(matchedAds);
   }
 
-  res.json([{ name: "ad1" }, { name: "ad2" }]);
+  const ads = await Ad.find();
+  res.json(ads);
 };
 
 module.exports = {
