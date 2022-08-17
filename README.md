@@ -17,6 +17,6 @@
 
 ## 🚚 Routes
 
-- `/api/ads` - To fetch all ads
-- `/api/ads?search=<searchTerm>` - To fetch only ads that match search term
-- `/api/companies` - To fetch all companies
+- `**GET** /api/adverts` - To fetch all ads
+- `**GET** /api/adverts?search=<searchTerm>` - To fetch only ads that match search term
+- `**GET** /api/companies` - To fetch all companies
