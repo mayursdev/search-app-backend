@@ -16,7 +16,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // route handling
-app.use("/api/ads", adsRoute);
+app.use("/api/adverts", adsRoute);
 app.use("/api/companies", companiesRoute);
 
 app.get("/", (req, res) => {
