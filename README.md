@@ -12,6 +12,9 @@
 - Add your mongodb connection string in the .env at key DB_CONNECTION
 Eg: `DB_CONNECTION = mongodb://127.0.0.1:27017/search-app`
 
+## 📦 Install dependencies
+`npm install`
+
 ## 🏃 All set, now run the server
 
 `npm start`
